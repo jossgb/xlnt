@@ -251,14 +251,14 @@ install(FILES ${XLNT_ROOT_DIR}/docs/xlnt.3
 DESTINATION ${MAN_DEST_DIR}/man3)
 
 # Configure uninstall
-configure_file("${XLNT_ROOT_DIR}/cmake/cmake_uninstall.cmake.in"
-  "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
-  IMMEDIATE @ONLY)
+# configure_file("${XLNT_ROOT_DIR}/cmake/cmake_uninstall.cmake.in"
+#   "${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake"
+#   IMMEDIATE @ONLY)
 
 # Add uninstall target
-add_custom_target(uninstall
-  COMMAND ${CMAKE_COMMAND} -P
-    ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake)
+# add_custom_target(uninstall
+#   COMMAND ${CMAKE_COMMAND} -P
+#     ${CMAKE_CURRENT_BINARY_DIR}/cmake_uninstall.cmake)
 
 if(NOT MSVC)
   # Set pkg-config variables
